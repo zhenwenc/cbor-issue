@@ -1,0 +1,38 @@
+{
+  "name": "cbor-issue",
+  "version": "1.0.0",
+  "description": "Reproduce issues in CBOR related libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhenwenc/cbor-issue.git"
+  },
+  "author": "Frederick Cai <frederick.cai@mattr.global>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/zhenwenc/cbor-issue/issues"
+  },
+  "homepage": "https://github.com/zhenwenc/cbor-issue#readme",
+  "engines": {
+    "node": "12.22.1"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 110,
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "dependencies": {
+    "@digitalbazaar/cborld": "4.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.23",
+    "@types/jsonld": "1.5.5",
+    "jest": "27.0.4",
+    "ts-jest": "27.0.3",
+    "typescript": "4.0.5"
+  }
+}
