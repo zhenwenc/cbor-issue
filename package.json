@@ -29,6 +29,7 @@
     "@digitalbazaar/cborld": "4.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "7.14.0",
     "@types/jest": "26.0.23",
     "@types/jsonld": "1.5.5",
     "jest": "27.0.4",

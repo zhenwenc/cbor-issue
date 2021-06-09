@@ -19,6 +19,17 @@ import { documentLoader } from '../__fixtures__/documentLoader';
  * `cborg` default encoders.
  *
  * -----------------------------------------------------------------------------
+ * [2021-06-09]
+ *
+ * This is likely related to the compatibility issue of CJS generation from ESM
+ * with Jest which seems to have its own `require` implementation.
+ *
+ * Maybe related issues:
+ *
+ * - Jest transform support (https://github.com/standard-things/esm/issues/706)
+ * - Native support for ES Modules (https://github.com/facebook/jest/issues/9430)
+ *
+ * -----------------------------------------------------------------------------
  */
 it('should encode JSON-LD document to CBOR-LD format with compression', async () => {
   const jsonldDocument = {
