@@ -1,0 +1,24 @@
+name: cborg-unit-test
+
+on:
+  push:
+    branches: '*'
+    paths:
+      - '**'
+      - '!src/__tests__/**'
+      - 'src/__tests__/cborg-*.spec.ts'
+
+jobs:
+  cborg-encode:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: https://registry.npmjs.org
+      - run: yarn install --frozen-lockfile
+      - run: yarn test cborg-encode.spec.ts
